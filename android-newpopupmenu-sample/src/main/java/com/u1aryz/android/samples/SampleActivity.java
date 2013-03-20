@@ -40,11 +40,14 @@ public class SampleActivity extends ListActivity implements
                 getResources().getDrawable(R.drawable.ic_context_menu_add_to_playlist_normal));
         menu.add(SEARCH, R.string.search).setIcon(
                 getResources().getDrawable(R.drawable.ic_context_menu_search_normal));
+        menu.setPosition(position);
         menu.show(v);
     }
 
     @Override
     public void onItemSelected(MenuItem item) {
+        //Position of list's row
+        int position = item.getPosition();
         switch (item.getItemId()) {
         case PLAY_SELECTION:
             break;
