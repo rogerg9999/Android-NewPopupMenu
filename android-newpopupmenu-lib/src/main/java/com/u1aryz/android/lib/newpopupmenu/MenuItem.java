@@ -9,7 +9,16 @@ public class MenuItem {
     private String title;
     private Drawable icon;
     private Intent intent;
-
+    private int position;
+    
+    public void setPosition(int position){
+        this.position = position;
+    }
+    
+    public int getPosition(){
+        return position;
+    }
+    
     public void setItemId(int itemId) {
         this.itemId = itemId;
     }
